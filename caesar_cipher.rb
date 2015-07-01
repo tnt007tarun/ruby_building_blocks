@@ -6,5 +6,6 @@ puts letters
 puts freq
 end
 
+
 caesar_cipher("what", "tfs")
 
