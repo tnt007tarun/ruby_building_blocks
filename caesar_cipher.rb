@@ -1,8 +1,10 @@
 def caesar_cipher(a, b)
 letters = a.split("")
-nums = letters.map {|ch| ch.ord - 'A'.ord + b}
-shifted = nums.map {|n| n.chr.to_s}
-puts shifted
+nums = letters.map {|ch| ch.ord + b}
+shifted = nums.map {|n| n.chr}
+puts letters
+puts nums
+puts shifted.join("")
 end
 
-caesar_cipher("WhaAAtring", 5)
+caesar_cipher("aha AAt ring", 5)
