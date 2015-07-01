@@ -1,11 +1,8 @@
 def caesar_cipher(a, b)
 letters = a.split("")
-freq = Hash.new(0)
-letters.each  { |w| freq[w] +=1 }
-puts letters
-puts freq
+nums = letters.map {|ch| ch.ord - 'A'.ord + b}
+shifted = nums.map {|n| n.chr.to_s}
+puts shifted
 end
 
-
-caesar_cipher("what", "tfs")
-
+caesar_cipher("WhaAAtring", 5)
